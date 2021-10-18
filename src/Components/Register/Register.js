@@ -11,9 +11,7 @@ const Register = () => {
     return (
         <div className='w-50 mx-auto p-5 bg-white shadow login-area'>
             <h2 className='mb-5'>Please Register</h2>
-            <form onSubmit={registerWithEmailAndPass}>
-
-
+            <form onSubmit={handleSubmit(onSubmit)}>
                 <div class="form-floating mb-3">
                     <input {...register("name")} type="text" class="form-control" id="floatingInput" placeholder="Jhon Due" />
                     <label for="floatingInput">Name</label>

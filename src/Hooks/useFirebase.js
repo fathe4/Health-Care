@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import firebaseInitialization from '../Firebase/Firebase.init';
-import { getAuth, onAuthStateChanged, GoogleAuthProvider, signInWithPopup, signOut, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, onAuthStateChanged, GoogleAuthProvider, signInWithPopup, signOut, createUserWithEmailAndPassword } from "firebase/auth";
 
 
 firebaseInitialization()
@@ -15,14 +15,19 @@ const useFirebase = () => {
     const password = form.password
 
 
-    const registerWithEmailAndPass = () => {
-        signInWithEmailAndPassword(auth, email, password)
+    const registerWithEmailAndPass = (email, password) => {
+        console.log(email, password);
+        createUserWithEmailAndPassword(auth, email, password)
             .then(result => {
-                const emailuser = result.user;
-                console.log(emailuser);
+                const emailUser = result.user
+                console.log(emailUser);
+            }).catch(error => {
+                console.log(error.message);
             })
 
     }
+
+    registerWithEmailAndPass(email, password)
 
 
 
