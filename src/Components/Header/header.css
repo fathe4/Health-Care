@@ -1,0 +1,11 @@
+.navbar-nav a {
+    text-decoration: none;
+    margin-right: 28px;
+    color: #000;
+    font-weight: 500;
+    margin: auto 15px;
+}
+
+.userName{
+    margin: auto 15px;
+}

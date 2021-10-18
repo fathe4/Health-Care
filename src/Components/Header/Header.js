@@ -1,7 +1,11 @@
 import React from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import useAuth from '../../Hooks/useAuth';
+import './header.css'
 
 const Header = () => {
+    const { user, logOut } = useAuth()
     return (
         <div>
             <Navbar bg="light" expand="lg">
@@ -10,11 +14,16 @@ const Header = () => {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ms-auto">
-                            <Nav.Link href="#home">Home</Nav.Link>
-                            <Nav.Link href="#link">Services</Nav.Link>
-                            <Nav.Link href="#link">About Us</Nav.Link>
-                            <Nav.Link href="#link">Contact Us</Nav.Link>
-                            <Button variant="danger">Login</Button>
+                            <Link to="/home">Home</Link>
+                            <Link to="/services">Service</Link>
+                            <Link to="/about">About Us</Link>
+                            <Link to="/contact">Contact Us</Link>
+                            <span className='userName'>{user.displayName}</span>
+
+                            <Link to='/login'>
+
+                                {user.email ? <Button variant="danger" onClick={logOut}>Logout</Button> : <Button variant="danger">Login</Button>}
+                            </Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

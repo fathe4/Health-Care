@@ -1,0 +1,14 @@
+.footer-area{
+    background-color: #223645;
+    color: #fff;
+}
+.ul.footer-menu li {
+    list-style: none;
+}
+.footer-menu{
+    padding-left:10px;
+}
+a.nav-link {
+    color: rgba(255,255,255,0.5);
+    padding-left: 0;
+}

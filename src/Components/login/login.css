@@ -1,0 +1,20 @@
+.login-area{
+    margin: 100px 0;
+}
+
+.input-btn{
+    background-color: #E12857;
+    padding: 7px 60px;
+    border: 2px solid rgb(126, 126, 126);
+    border-radius: 5px;
+    color: #E12857;
+    font-weight: 600;
+    transition: .3s;
+    color: #fff;
+    border: none;
+}
+
+.input-btn:hover{
+    background-color: #243847;
+    color: #fff;
+}
