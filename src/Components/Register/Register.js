@@ -4,10 +4,11 @@ import { Link } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 
 const Register = () => {
-    const { setForm, registerWithEmailAndPass } = useAuth()
+    const { signInWithGoogle, setForm, error } = useAuth()
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => setForm(data);
-    const { signInWithGoogle } = useAuth()
+
+
     return (
         <div className='w-50 mx-auto p-5 bg-white shadow login-area'>
             <h2 className='mb-5'>Please Register</h2>
@@ -26,6 +27,7 @@ const Register = () => {
                 </div>
 
                 {errors.exampleRequired && <span>This field is required</span>}<br />
+                {error}<br />
                 <input className='input-btn my-3' type="submit" value='Register' /> or <button onClick={signInWithGoogle} className='service-btn text-center'>Google Sign In</button> <br />
                 <Link to='/login' className='text-decoration-underline'>Already Registered? </Link>
 

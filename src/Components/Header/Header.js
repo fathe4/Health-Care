@@ -8,9 +8,9 @@ const Header = () => {
     const { user, logOut } = useAuth()
     return (
         <div>
-            <Navbar bg="light" expand="lg">
+            <Navbar fixed='top' bg="light" expand="lg">
                 <Container>
-                    <Navbar.Brand href="#home">HealthCare</Navbar.Brand>
+                    <Navbar.Brand >Health Care</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ms-auto">

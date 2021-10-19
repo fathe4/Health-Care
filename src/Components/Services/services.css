@@ -16,3 +16,9 @@
     background-color: #243847;
     color: #fff;
 }
+
+@media only screen and (max-width:688px) {
+    .service-btn{
+        font-size: 14px;
+    }
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './banner.css'
 
 const Banner = () => {
@@ -7,11 +8,11 @@ const Banner = () => {
             <div>
 
             </div>
-            <div className='bg-white p-5 m-5 w-50 rounded shadow'>
+            <div className='bg-white p-lg-5 m-5 w-lg-50 p-4 rounded shadow text-center'>
                 <h2 className='fw-bolder'>Commited to Trusted HealthCare</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, nihil. Laboriosam consequatur quaerat sunt fugiat!</p>
-                <button className='btn btn-danger'>Find a caregiver</button>
-                <button className='btn btn-outline-dark ms-3'>View all services</button>
+                <p>Want a special care for you? WE provided best Home care service with many facilities, we are the trust worthy platform.</p>
+                <Link to='/services'><button className='btn btn-danger mb-3'>Find a caregiver</button></Link>
+                <Link to='/services'><button className='btn btn-outline-dark mb-3 ms-lg-3'>View all services</button></Link>
             </div>
         </div>
     );

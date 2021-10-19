@@ -9,8 +9,12 @@ body{
 .custom-color{
   color: #E12454;;
 }
-p{
+p, span{
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   color: #7A8A9E;
+}
+
+.primary-color{
+  color: #E12857;
 }

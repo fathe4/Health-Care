@@ -7,7 +7,9 @@ import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';
 import Login from './Components/login/Login';
 import NotFound from './Components/NotFound/NotFound';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import Register from './Components/Register/Register';
+import ServiceDetail from './Components/ServiceDetail/ServiceDetail';
 import ServicesPage from './Components/ServicePage/ServicesPage';
 import AuthProvider from './Context/AuthProvider';
 
@@ -27,6 +29,11 @@ function App() {
             <Route path='/services'>
               <ServicesPage></ServicesPage>
             </Route>
+
+            <PrivateRoute path='/service/:serviceId'>
+              <ServiceDetail></ServiceDetail>
+            </PrivateRoute>
+
             <Route path='/about'>
               <About></About>
             </Route>
