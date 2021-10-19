@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
+import { Link } from 'react-router-dom';
 import useServices from '../../Hooks/useServices';
+import './serviceDetail.css'
 
 const ServiceDetail = () => {
     const [singleService, setSingleService] = useState({})
@@ -15,12 +17,29 @@ const ServiceDetail = () => {
     }, [services])
 
     return (
-        <div className='container'>
-            <div className="row">
-                <div className="col-md-8 g-4">
-                    <img className='img-fluid shadow mb-5' src={singleService?.img} alt="" />
-                    <h2>{singleService?.name}</h2>
-                    <p>{singleService?.Description}</p>
+        <div className='container '>
+            <div className="row service-detail">
+                <div className="col-md-8 g-4 ">
+                    <div>
+                        <img className='img-fluid shadow mb-5' src={singleService?.img} alt="" />
+                        <h2>{singleService?.name}</h2>
+                        <p>{singleService?.Description}</p>
+                    </div>
+
+                    <div>
+                        <h2 className='fw-bold'>{singleService?.details?.detailTitle}</h2>
+                        <p>{singleService?.details?.detailDescription}</p>
+                        <h5 className='fw-bold'>Personal Care</h5>
+                        <p >{singleService?.details?.personalCare}</p>
+                        <h5 className='fw-bold'>Lifestyle Support</h5>
+                        <p >{singleService?.details?.lifeStyleSupport}</p>
+
+                    </div>
+
+                    <Link to='/contact'>
+                        <button className='contact-btn'>Contact For this Service</button>
+                    </Link>
+
                 </div>
                 <div className="col-md-4">
 

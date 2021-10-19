@@ -4,6 +4,7 @@ import useAuth from '../../Hooks/useAuth';
 
 const PrivateRoute = ({ children, ...rest }) => {
     const { user, loading } = useAuth()
+
     if (loading) {
         return (
             <div class="spinner-grow" style={{ width: '3rem', height: '3rem' }} role="status">

@@ -3,36 +3,72 @@
         "id": 1,
         "name": "Daily Home Care",
         "Description": "We send a doctor to visit the patient at home to diagnose and treat the illnesses. He or she may also periodically review the home health care needs.",
-        "img": "https://www.marken.com/wp-content/uploads/2021/06/shutterstock_1290675760_Edit-e1624397804977.png"
+        "img": "https://www.marken.com/wp-content/uploads/2021/06/shutterstock_1290675760_Edit-e1624397804977.png",
+        "details": {
+            "detailTitle": "We are here to help when you need us",
+            "detailDescription": "By helping with daily activities, our caregivers enable clients to maintain their normal daily routines. Hourly home care allows clients to use our caregivers on an hourly or as-needed basis. Surrounded by their possessions, pets, and a familiar environment, our clients receive the support they need to enjoy their regular activities and continue living well at home.",
+            "personalCare": "Assisting with walking from bed to wheelchair. Bathing, dressing and grooming assistance. Medication reminders. Safety and fall prevention. Status reporting to family",
+            "lifeStyleSupport": "Light housekeeping. Meal preparation and nutrition. Laundry and change of bed linens. Grocery shopping and errands. Transportation to social & recreational activities."
+        }
     },
     {
         "id": 2,
         "name": "Hourly Home Care",
         "Description": "The most common form of home health care. It is a type of nursing care that depends on the individual needs. Through consultation with the doctor, a registered nurse will set up a plan of care.",
-        "img": "https://cdn.cfr.org/sites/default/files/styles/immersive_image_3_2_desktop_2x/public/image/2020/04/Coronavirus_healthcare.jpg"
+        "img": "https://cdn.cfr.org/sites/default/files/styles/immersive_image_3_2_desktop_2x/public/image/2020/04/Coronavirus_healthcare.jpg",
+        "details": {
+            "detailTitle": "We are here to help when you need us",
+            "detailDescription": "By helping with daily activities, our caregivers enable clients to maintain their normal daily routines. Hourly home care allows clients to use our caregivers on an hourly or as-needed basis. Surrounded by their possessions, pets, and a familiar environment, our clients receive the support they need to enjoy their regular activities and continue living well at home.",
+            "personalCare": "Assisting with walking from bed to wheelchair. Bathing, dressing and grooming assistance. Medication reminders. Safety and fall prevention. Status reporting to family",
+            "lifeStyleSupport": "Light housekeeping. Meal preparation and nutrition. Laundry and change of bed linens. Grocery shopping and errands. Transportation to social & recreational activities."
+        }
     },
     {
         "id": 3,
         "name": "Specialized Care",
         "Description": "Physical / mental / occupational care provide patients with help on relearning how to perform daily duties or improve their speech after a severe illness or injury.",
-        "img": "https://truenorthcustom.com/wp-content/uploads/2018/05/740979067.jpg"
+        "img": "https://truenorthcustom.com/wp-content/uploads/2018/05/740979067.jpg",
+        "details": {
+            "detailTitle": "We are here to help when you need us",
+            "detailDescription": "By helping with daily activities, our caregivers enable clients to maintain their normal daily routines. Hourly home care allows clients to use our caregivers on an hourly or as-needed basis. Surrounded by their possessions, pets, and a familiar environment, our clients receive the support they need to enjoy their regular activities and continue living well at home.",
+            "personalCare": "Assisting with walking from bed to wheelchair. Bathing, dressing and grooming assistance. Medication reminders. Safety and fall prevention. Status reporting to family",
+            "lifeStyleSupport": "Light housekeeping. Meal preparation and nutrition. Laundry and change of bed linens. Grocery shopping and errands. Transportation to social & recreational activities."
+        }
     },
     {
         "id": 4,
         "name": "Advanced Care",
         "Description": "Medical social workers provide various services to the patient, including counseling and locating community resources to help the patient in his or her recovery.",
-        "img": "https://www.phoenixspermbank.com/wp-content/uploads/2015/12/Sperm-Donors-Get-Free-Access-To-Regular-Medical-Care-716x393.jpg"
+        "img": "https://www.phoenixspermbank.com/wp-content/uploads/2015/12/Sperm-Donors-Get-Free-Access-To-Regular-Medical-Care-716x393.jpg",
+        "details": {
+            "detailTitle": "We are here to help when you need us",
+            "detailDescription": "By helping with daily activities, our caregivers enable clients to maintain their normal daily routines. Hourly home care allows clients to use our caregivers on an hourly or as-needed basis. Surrounded by their possessions, pets, and a familiar environment, our clients receive the support they need to enjoy their regular activities and continue living well at home.",
+            "personalCare": "Assisting with walking from bed to wheelchair. Bathing, dressing and grooming assistance. Medication reminders. Safety and fall prevention. Status reporting to family",
+            "lifeStyleSupport": "Light housekeeping. Meal preparation and nutrition. Laundry and change of bed linens. Grocery shopping and errands. Transportation to social & recreational activities."
+        }
     },
     {
         "id": 5,
         "name": "Hospital to Home Care",
         "Description": "Help the patient with his or her basic personal needs such as getting out of bed, walking, bathing, and dressing. Some aides have received specialized training under the supervision of a nurse.",
-        "img": "https://www.asiliahealthcare.com/wp-content/uploads/2020/07/4-1.jpg"
+        "img": "https://www.asiliahealthcare.com/wp-content/uploads/2020/07/4-1.jpg",
+        "details": {
+            "detailTitle": "We are here to help when you need us",
+            "detailDescription": "By helping with daily activities, our caregivers enable clients to maintain their normal daily routines. Hourly home care allows clients to use our caregivers on an hourly or as-needed basis. Surrounded by their possessions, pets, and a familiar environment, our clients receive the support they need to enjoy their regular activities and continue living well at home.",
+            "personalCare": "Assisting with walking from bed to wheelchair. Bathing, dressing and grooming assistance. Medication reminders. Safety and fall prevention. Status reporting to family",
+            "lifeStyleSupport": "Light housekeeping. Meal preparation and nutrition. Laundry and change of bed linens. Grocery shopping and errands. Transportation to social & recreational activities."
+        }
     },
     {
         "id": 6,
         "name": "Respite Home Care",
         "Description": "While a patient is being medically cared for in the home, a homemaker or person who helps with chores or tasks can maintain the household with various housekeeping tasks.",
-        "img": "https://chamsocsuckhoeviet.com.vn/wp-content/uploads/2020/08/kiemtrasuckhoenguoicaotuoi.jpeg"
+        "img": "https://chamsocsuckhoeviet.com.vn/wp-content/uploads/2020/08/kiemtrasuckhoenguoicaotuoi.jpeg",
+        "details": {
+            "detailTitle": "We are here to help when you need us",
+            "detailDescription": "By helping with daily activities, our caregivers enable clients to maintain their normal daily routines. Hourly home care allows clients to use our caregivers on an hourly or as-needed basis. Surrounded by their possessions, pets, and a familiar environment, our clients receive the support they need to enjoy their regular activities and continue living well at home.",
+            "personalCare": "Assisting with walking from bed to wheelchair. Bathing, dressing and grooming assistance. Medication reminders. Safety and fall prevention. Status reporting to family",
+            "lifeStyleSupport": "Light housekeeping. Meal preparation and nutrition. Laundry and change of bed linens. Grocery shopping and errands. Transportation to social & recreational activities."
+        }
     }
 ]
