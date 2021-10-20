@@ -6,7 +6,7 @@ import './testimonial.css'
 const Testimonial = () => {
     return (
         <div className='container text-center'>
-            <div className='my-5 w-50 mx-auto'>
+            <div className='my-5 w-lg-50 mx-auto'>
                 <h6> Testimonial</h6>
                 <h2 className='fw-bold'>Our patient Feedbacks</h2>
                 <p className='w-lg-50 mx-auto'>We make efforts to change the way that healthcare services are offered in order to meet the changing needs of our patients, both for the present and future.</p>

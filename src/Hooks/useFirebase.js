@@ -8,43 +8,53 @@ const useFirebase = () => {
     const [user, setUser] = useState({})
     const [error, setError] = useState('')
     const [loading, setLoading] = useState(true)
-    const [form, setForm] = useState({})
     const auth = getAuth();
-    const email = form.email
-    const password = form.password
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
 
+    // User name
+    const handleNameChange = (e) => {
+        setName(e.target.value)
+    }
+    // User Email
+    const handleEmailChange = (e) => {
+        setEmail(e.target.value)
+    }
+    // user Password
+    const handlePasswordChange = (e) => {
+        setPassword(e.target.value)
+    }
+
+    const handleRegistration = (e) => {
+        e.preventDefault();
+        registerWithEmailAndPass(email, password)
+    }
 
     // Handle Registration form
     const registerWithEmailAndPass = (email, password) => {
         setLoading(true)
         createUserWithEmailAndPassword(auth, email, password)
             .then(result => {
-
                 const emailUser = result.user
                 updateUserProfile()
                 setUser(emailUser)
                 setError('')
+                window.location.reload()
             }).catch(error => {
                 setError(error.message);
             }).finally(() => setLoading(false))
     }
 
-    useEffect(() => {
-        registerWithEmailAndPass(email, password)
-    }, [form])
-
-    //  Update user Profile
-
     const updateUserProfile = () => {
-        const userName = form.name
-        updateProfile(auth.currentUser, { displayName: userName })
+        updateProfile(auth.currentUser, { displayName: name })
             .then(result => { })
     }
 
     // Login Process
     const loginProcess = (email, password) => {
 
-        signInWithEmailAndPassword(auth, email, password)
+        return signInWithEmailAndPassword(auth, email, password)
             .then(result => {
                 const loginUser = result.user
                 setUser(loginUser)
@@ -52,56 +62,64 @@ const useFirebase = () => {
             }).catch(error => {
                 setError(error.message)
             }).finally(() => setLoading(false))
+
     }
 
-    loginProcess(email, password)
-
-
+    const handleLogin = (e) => {
+        e.preventDefault();
+        loginProcess(email, password)
+    }
 
     // Handle Google Sign In
     const signInWithGoogle = () => {
+        setLoading(true)
         const googleProvider = new GoogleAuthProvider();
+        return signInWithPopup(auth, googleProvider)
 
-        signInWithPopup(auth, googleProvider)
-            .then((result) => {
-                const user = result.user;
-                setUser(user)
-            }).catch(error => {
-                setError(error.message)
-            }).finally(() => setLoading(false))
     }
     useEffect(() => {
         const unsubscribed = onAuthStateChanged(auth, user => {
+            setLoading(true)
             if (user) {
+
                 setUser(user)
             } else {
                 setUser({})
             }
-            setLoading(true)
+            setLoading(false)
+
         })
         return () => unsubscribed;
     }, [])
 
     // Sign Out BUtton
     const logOut = () => {
-        setLoading(true)
+
         signOut(auth).then(() => {
             setUser({})
         }).catch((error) => {
             setError(error.message)
-        }).finally(() => setLoading(false))
+        })
     }
 
     return {
         signInWithGoogle,
         user,
         error,
+        email,
+        password,
         logOut,
-        setForm,
+        setUser,
+        setError,
         loading,
         registerWithEmailAndPass,
-        setLoading
-
+        setLoading,
+        loginProcess,
+        handleNameChange,
+        handleEmailChange,
+        handlePasswordChange,
+        handleRegistration,
+        handleLogin
     }
 };
 

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
+import useAuth from '../../Hooks/useAuth';
 import useServices from '../../Hooks/useServices';
 import './serviceDetail.css'
 
@@ -9,12 +10,15 @@ const ServiceDetail = () => {
     const { serviceId } = useParams()
     const { services } = useServices()
     const serviceIdNumber = parseFloat(serviceId)
+    const { user } = useAuth()
 
+    console.log(user);
 
     useEffect(() => {
         const findService = services.find(service => service.id === serviceIdNumber);
         setSingleService(findService);
     }, [services])
+
 
     return (
         <div className='container '>

@@ -10,9 +10,9 @@ const Services = () => {
                 <h6>OUR SERVICES</h6>
                 <h2 className='fw-bold'>Health Care Services</h2>
                 <p className='w-lg-50 mx-auto'>We make efforts to change the way that healthcare services are offered in order to meet the changing needs of our patients, both for the present and future.</p>
-                <div class="row row-cols-1 row-cols-md-3 g-4 py-5">
+                <div className="row row-cols-1 row-cols-md-3 g-4 py-5">
                     {
-                        services.map(service => <Service service={service}></Service>)
+                        services.map(service => <Service key={service.id} service={service}></Service>)
                     }
                 </div>
             </div>

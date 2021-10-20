@@ -1,19 +1,23 @@
 import React from 'react';
 import useServices from '../../Hooks/useServices';
+import BreadCrumb from '../Breadcrumb/Breadcrumb';
 import Service from '../Service/Service';
 
 const ServicesPage = () => {
     const { services } = useServices()
     return (
-        <div className='container py-5 '>
-            <h2 className='text-center fw-bold mt-5'>Our Services</h2>
-            <div class="row row-cols-1 row-cols-md-3 g-4 py-5">
+        <>
+            <BreadCrumb text='Our Services' img="https://i.ibb.co/pXnnq7N/cdc-u-N8-TV9-Pw2ik-unsplash.jpg"></BreadCrumb>
+            <div className='container py-5 '>
 
-                {
-                    services.map(service => <Service service={service}></Service>)
-                }
+                <div class="row row-cols-1 row-cols-md-3 g-4 py-5">
+
+                    {
+                        services.map(service => <Service service={service}></Service>)
+                    }
+                </div>
             </div>
-        </div>
+        </>
     );
 };
 
