@@ -46,8 +46,7 @@ const Login = () => {
                     <input className='input-btn my-3' type="submit" value='Login' /> or <button onClick={handleGoogleLogin} className='service-btn text-center'>Google Sign In</button>
 
                 </form>
-                <Link to='/register' className='text-decoration-underline' >New User? </Link> or
-                <Link to='/register' className='text-decoration-underline'> Forgot Password? </Link>
+                <Link to='/register' className='text-decoration-underline' >New User? </Link>
 
             </div>
         </div>
